@@ -705,4 +705,399 @@ function debounce(func, wait) {
         clearTimeout(timeout);
         timeout = setTimeout(later, wait);
     };
-}; 
+};
+
+// Utility functions
+const formatNumber = (num) => {
+    return new Intl.NumberFormat('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    }).format(num);
+};
+
+const formatPercentage = (num) => {
+    return new Intl.NumberFormat('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+        style: 'percent'
+    }).format(num / 100);
+};
+
+const formatVolume = (num) => {
+    if (num >= 1e9) return (num / 1e9).toFixed(2) + 'B';
+    if (num >= 1e6) return (num / 1e6).toFixed(2) + 'M';
+    if (num >= 1e3) return (num / 1e3).toFixed(2) + 'K';
+    return num.toString();
+};
+
+// Chart configuration
+const chartConfig = {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: {
+        intersect: false,
+        mode: 'index'
+    },
+    plugins: {
+        legend: {
+            position: 'top'
+        }
+    }
+};
+
+// Load market indices
+const loadMarketIndices = async () => {
+    try {
+        const response = await fetch('/api/indices');
+        const data = await response.json();
+        
+        const container = document.getElementById('market-indices');
+        container.innerHTML = data.map(index => `
+            <div class="text-center">
+                <h6 class="mb-1">${index.symbol}</h6>
+                <div class="fs-5 fw-bold ${index.change_percent >= 0 ? 'positive' : 'negative'}">
+                    ${formatNumber(index.price)}
+                </div>
+                <div class="${index.change_percent >= 0 ? 'positive' : 'negative'}">
+                    ${index.change_percent >= 0 ? '▲' : '▼'} ${formatPercentage(Math.abs(index.change_percent))}
+                </div>
+            </div>
+        `).join('');
+    } catch (error) {
+        console.error('Error loading market indices:', error);
+    }
+};
+
+// Load market overview
+const loadMarketOverview = async () => {
+    try {
+        const response = await fetch('/api/market_overview');
+        const data = await response.json();
+        
+        // Sector Performance Chart
+        const sectorCtx = document.getElementById('sector-performance').getContext('2d');
+        new Chart(sectorCtx, {
+            type: 'bar',
+            data: {
+                labels: data.sector_performance.map(s => s.sector),
+                datasets: [{
+                    label: 'Performance',
+                    data: data.sector_performance.map(s => s.performance),
+                    backgroundColor: data.sector_performance.map(s => s.performance >= 0 ? 'rgba(40, 167, 69, 0.5)' : 'rgba(220, 53, 69, 0.5)'),
+                    borderColor: data.sector_performance.map(s => s.performance >= 0 ? 'rgb(40, 167, 69)' : 'rgb(220, 53, 69)'),
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                ...chartConfig,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: value => formatPercentage(value)
+                        }
+                    }
+                }
+            }
+        });
+
+        // Top Movers
+        const topMoversContainer = document.getElementById('top-movers');
+        topMoversContainer.innerHTML = data.top_movers.map(stock => `
+            <div class="stock-card p-3 border-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="mb-1">${stock.symbol}</h6>
+                        <small class="text-muted">${stock.name}</small>
+                    </div>
+                    <div class="text-end">
+                        <div class="fw-bold">${formatNumber(stock.price)}</div>
+                        <div class="${stock.change_percent >= 0 ? 'positive' : 'negative'}">
+                            ${stock.change_percent >= 0 ? '▲' : '▼'} ${formatPercentage(Math.abs(stock.change_percent))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    } catch (error) {
+        console.error('Error loading market overview:', error);
+    }
+};
+
+// Load technical analysis
+const loadTechnicalAnalysis = async (symbol, period) => {
+    try {
+        const [technicalResponse, chartResponse] = await Promise.all([
+            fetch(`/api/technical/${symbol}?period=${period}`),
+            fetch(`/api/chart_data/${symbol}?period=${period}`)
+        ]);
+        
+        const [technicalData, chartData] = await Promise.all([
+            technicalResponse.json(),
+            chartResponse.json()
+        ]);
+
+        // Price Chart
+        const priceCtx = document.getElementById('price-chart').getContext('2d');
+        new Chart(priceCtx, {
+            type: 'candlestick',
+            data: {
+                labels: chartData.dates,
+                datasets: [{
+                    label: symbol,
+                    data: chartData.prices.map((price, i) => ({
+                        t: chartData.dates[i],
+                        o: price.open,
+                        h: price.high,
+                        l: price.low,
+                        c: price.close
+                    }))
+                }]
+            },
+            options: {
+                ...chartConfig,
+                scales: {
+                    y: {
+                        position: 'right'
+                    }
+                }
+            }
+        });
+
+        // Volume Chart
+        const volumeCtx = document.getElementById('volume-chart').getContext('2d');
+        new Chart(volumeCtx, {
+            type: 'bar',
+            data: {
+                labels: chartData.dates,
+                datasets: [{
+                    label: 'Volume',
+                    data: chartData.volumes,
+                    backgroundColor: chartData.prices.map(p => p.close >= p.open ? 'rgba(40, 167, 69, 0.5)' : 'rgba(220, 53, 69, 0.5)')
+                }]
+            },
+            options: {
+                ...chartConfig,
+                scales: {
+                    y: {
+                        position: 'right',
+                        ticks: {
+                            callback: value => formatVolume(value)
+                        }
+                    }
+                }
+            }
+        });
+
+        // Technical Indicators
+        const indicatorsContainer = document.getElementById('technical-indicators');
+        indicatorsContainer.innerHTML = `
+            <div class="mb-3">
+                <h6 class="mb-2">Moving Averages</h6>
+                <div class="d-flex flex-wrap gap-2">
+                    ${Object.entries(technicalData.indicators.moving_averages).map(([period, value]) => `
+                        <span class="indicator-badge bg-light">
+                            MA${period}: ${formatNumber(value)}
+                        </span>
+                    `).join('')}
+                </div>
+            </div>
+            <div class="mb-3">
+                <h6 class="mb-2">RSI</h6>
+                <div class="progress mb-2" style="height: 20px;">
+                    <div class="progress-bar ${technicalData.indicators.rsi < 30 ? 'bg-danger' : technicalData.indicators.rsi > 70 ? 'bg-success' : 'bg-warning'}"
+                         role="progressbar"
+                         style="width: ${technicalData.indicators.rsi}%"
+                         aria-valuenow="${technicalData.indicators.rsi}"
+                         aria-valuemin="0"
+                         aria-valuemax="100">
+                        ${formatNumber(technicalData.indicators.rsi)}
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h6 class="mb-2">MACD</h6>
+                <div class="d-flex flex-wrap gap-2">
+                    <span class="indicator-badge bg-light">
+                        MACD: ${formatNumber(technicalData.indicators.macd.value)}
+                    </span>
+                    <span class="indicator-badge bg-light">
+                        Signal: ${formatNumber(technicalData.indicators.macd.signal)}
+                    </span>
+                    <span class="indicator-badge ${technicalData.indicators.macd.histogram >= 0 ? 'bg-success text-white' : 'bg-danger text-white'}">
+                        Histogram: ${formatNumber(technicalData.indicators.macd.histogram)}
+                    </span>
+                </div>
+            </div>
+        `;
+
+        // Volume Analysis
+        const volumeAnalysisContainer = document.getElementById('volume-analysis');
+        volumeAnalysisContainer.innerHTML = `
+            <div class="mb-3">
+                <h6 class="mb-2">Volume Statistics</h6>
+                <div class="row">
+                    <div class="col-6">
+                        <small class="text-muted">Average Volume</small>
+                        <div class="fw-bold">${formatVolume(technicalData.volume.average)}</div>
+                    </div>
+                    <div class="col-6">
+                        <small class="text-muted">Relative Volume</small>
+                        <div class="fw-bold">${formatNumber(technicalData.volume.relative)}x</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h6 class="mb-2">Volume Trend</h6>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi ${technicalData.volume.trend === 'increasing' ? 'bi-arrow-up-circle-fill text-success' : 
+                                  technicalData.volume.trend === 'decreasing' ? 'bi-arrow-down-circle-fill text-danger' : 
+                                  'bi-dash-circle-fill text-warning'}"></i>
+                    <span class="text-capitalize">${technicalData.volume.trend}</span>
+                </div>
+            </div>
+        `;
+    } catch (error) {
+        console.error('Error loading technical analysis:', error);
+    }
+};
+
+// Load stock comparison
+const loadStockComparison = async (symbols, period) => {
+    try {
+        const response = await fetch(`/api/compare?symbols=${symbols.join(',')}&period=${period}`);
+        const data = await response.json();
+
+        const compareCtx = document.getElementById('compare-chart').getContext('2d');
+        new Chart(compareCtx, {
+            type: 'line',
+            data: {
+                labels: data.dates,
+                datasets: symbols.map(symbol => ({
+                    label: symbol,
+                    data: data.prices[symbol],
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.1
+                }))
+            },
+            options: {
+                ...chartConfig,
+                scales: {
+                    y: {
+                        position: 'right',
+                        ticks: {
+                            callback: value => formatNumber(value)
+                        }
+                    }
+                }
+            }
+        });
+    } catch (error) {
+        console.error('Error loading stock comparison:', error);
+    }
+};
+
+// Load news
+const loadNews = async (todayOnly = true) => {
+    try {
+        const response = await fetch(`/api/news?today_only=${todayOnly}`);
+        const news = await response.json();
+
+        const newsContainer = document.getElementById('news-container');
+        newsContainer.innerHTML = news.map(item => `
+            <div class="news-item p-3">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h6 class="mb-0">${item.title}</h6>
+                    <span class="news-time ms-2">${new Date(item.time).toLocaleTimeString()}</span>
+                </div>
+                <p class="mb-1">${item.summary}</p>
+                <div class="d-flex gap-2">
+                    ${item.symbols.map(symbol => `
+                        <span class="badge bg-light text-dark">${symbol}</span>
+                    `).join('')}
+                </div>
+            </div>
+        `).join('');
+    } catch (error) {
+        console.error('Error loading news:', error);
+    }
+};
+
+// Load available symbols
+const loadSymbols = async () => {
+    try {
+        const response = await fetch('/api/symbols');
+        const symbols = await response.json();
+
+        // Technical Analysis symbol selector
+        const technicalSymbol = document.getElementById('technical-symbol');
+        technicalSymbol.innerHTML = `
+            <option value="" disabled selected>Select Stock</option>
+            ${symbols.map(symbol => `<option value="${symbol}">${symbol}</option>`).join('')}
+        `;
+
+        // Compare stocks selectors
+        const stock1 = document.getElementById('stock1');
+        const stock2 = document.getElementById('stock2');
+        
+        stock1.innerHTML = symbols.map(symbol => `<option value="${symbol}">${symbol}</option>`).join('');
+        stock2.innerHTML = symbols.map(symbol => `<option value="${symbol}">${symbol}</option>`).join('');
+    } catch (error) {
+        console.error('Error loading symbols:', error);
+    }
+};
+
+// Event listeners
+document.addEventListener('DOMContentLoaded', () => {
+    // Load initial data
+    loadMarketIndices();
+    loadMarketOverview();
+    loadSymbols();
+    loadNews();
+
+    // Technical Analysis events
+    const technicalSymbol = document.getElementById('technical-symbol');
+    const technicalPeriod = document.getElementById('technical-period');
+
+    const updateTechnical = () => {
+        if (technicalSymbol.value) {
+            loadTechnicalAnalysis(technicalSymbol.value, technicalPeriod.value);
+        }
+    };
+
+    technicalSymbol.addEventListener('change', updateTechnical);
+    technicalPeriod.addEventListener('change', updateTechnical);
+
+    // Compare stocks events
+    const stock1 = document.getElementById('stock1');
+    const stock2 = document.getElementById('stock2');
+    const comparePeriod = document.getElementById('compare-period');
+
+    const updateComparison = () => {
+        const selectedStocks = [...stock1.selectedOptions, ...stock2.selectedOptions].map(option => option.value);
+        if (selectedStocks.length >= 2) {
+            loadStockComparison(selectedStocks, comparePeriod.value);
+        }
+    };
+
+    stock1.addEventListener('change', updateComparison);
+    stock2.addEventListener('change', updateComparison);
+    comparePeriod.addEventListener('change', updateComparison);
+
+    // News filter event
+    const todayOnly = document.getElementById('today-only');
+    todayOnly.addEventListener('change', () => loadNews(todayOnly.checked));
+
+    // Auto-refresh market data every 5 minutes
+    setInterval(() => {
+        loadMarketIndices();
+        loadMarketOverview();
+        if (technicalSymbol.value) {
+            loadTechnicalAnalysis(technicalSymbol.value, technicalPeriod.value);
+        }
+        if (todayOnly.checked) {
+            loadNews(true);
+        }
+    }, 300000);
+}); 

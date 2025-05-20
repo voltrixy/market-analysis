@@ -4,32 +4,26 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
-    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements first to leverage Docker cache
 COPY requirements.txt .
+
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 COPY . .
 
-# Create necessary directories
-RUN mkdir -p logs data/cache
-
 # Set environment variables
-ENV PYTHONUNBUFFERED=1
 ENV FLASK_APP=app.py
 ENV FLASK_ENV=production
+ENV PYTHONUNBUFFERED=1
 
 # Expose port
 EXPOSE 8000
 
-# Create non-root user
-RUN useradd -m appuser && chown -R appuser:appuser /app
-USER appuser
-
-# Run the application
-CMD ["gunicorn", "--config", "gunicorn_config.py", "wsgi:app"] 
+# Start Gunicorn
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "--workers", "4", "--timeout", "120", "app:app"] 

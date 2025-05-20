@@ -21,6 +21,12 @@
                         <a class="nav-link active" href="#overview">Overview</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#technical">Technical</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#compare">Compare</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#news">News</a>
                     </li>
                 </ul>
@@ -87,6 +93,106 @@
             </div>
         </section>
 
+        <!-- Technical Analysis Section -->
+        <section id="technical" class="mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="mb-0">Technical Analysis</h2>
+                <div class="d-flex gap-3">
+                    <select class="form-select stock-selector" id="technical-symbol">
+                        <option value="" disabled selected>Select Stock</option>
+                    </select>
+                    <select class="form-select period-selector" id="technical-period">
+                        <option value="1D">1 Day</option>
+                        <option value="1W">1 Week</option>
+                        <option value="1M" selected>1 Month</option>
+                        <option value="3M">3 Months</option>
+                        <option value="6M">6 Months</option>
+                        <option value="1Y">1 Year</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <canvas id="price-chart" class="technical-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <canvas id="volume-chart" class="volume-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Technical Indicators</h5>
+                        </div>
+                        <div class="card-body">
+                            <div id="technical-indicators">
+                                <div class="d-flex justify-content-center align-items-center h-100">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">Volume Analysis</h5>
+                        </div>
+                        <div class="card-body">
+                            <div id="volume-analysis">
+                                <div class="d-flex justify-content-center align-items-center h-100">
+                                    <div class="spinner-border text-primary" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compare Stocks Section -->
+        <section id="compare" class="mb-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="mb-0">Compare Stocks</h2>
+                <div class="d-flex gap-3">
+                    <select class="form-select period-selector" id="compare-period">
+                        <option value="1M" selected>1 Month</option>
+                        <option value="3M">3 Months</option>
+                        <option value="6M">6 Months</option>
+                        <option value="1Y">1 Year</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-6 mb-3">
+                    <select class="form-select" id="stock1" multiple size="5">
+                        <option value="" disabled>Loading stocks...</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <select class="form-select" id="stock2" multiple size="5">
+                        <option value="" disabled>Loading stocks...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <canvas id="compare-chart" class="compare-chart"></canvas>
+                </div>
+            </div>
+        </section>
+
         <!-- News Section -->
         <section id="news" class="mb-5">
             <div class="d-flex justify-content-between align-items-center mb-4">
@@ -112,6 +218,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-financial"></script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html> 

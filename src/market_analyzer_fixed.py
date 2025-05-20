@@ -112,7 +112,7 @@ class MarketNewsAnalyzer:
             'DNT': '1',
             'Upgrade-Insecure-Requests': '1'
         }
-
+        
     def load_config(self):
         """Load configuration data"""
         # Headers for requests
@@ -354,61 +354,61 @@ class MarketNewsAnalyzer:
                 source = future_to_source[future]
                 try:
                     html_content = future.result()
-                    if html_content:
-                        articles = self.parse_news(html_content, source)
-                        for article in articles:
-                            if article['title'] not in seen_titles:
-                                seen_titles.add(article['title'])
-                                
-                                # Check if article is from today/yesterday
-                                article_date = article.get('date')
-                                if article_date:
-                                    if today_only and article_date.date() != today:
-                                        continue
-                                    if not today_only and article_date.date() not in [today, yesterday]:
-                                        continue
-                                
+            if html_content:
+                articles = self.parse_news(html_content, source)
+                for article in articles:
+                    if article['title'] not in seen_titles:
+                        seen_titles.add(article['title'])
+                        
+                        # Check if article is from today/yesterday
+                        article_date = article.get('date')
+                        if article_date:
+                            if today_only and article_date.date() != today:
+                                continue
+                            if not today_only and article_date.date() not in [today, yesterday]:
+                                continue
+                        
                                 # Get mentioned stocks and their data in parallel
-                                mentioned_stocks = self.detect_stock_mentions(
-                                    f"{article['title']} {article.get('summary', '')}"
-                                )
-                                
-                                if mentioned_stocks:
+                        mentioned_stocks = self.detect_stock_mentions(
+                            f"{article['title']} {article.get('summary', '')}"
+                        )
+                        
+                        if mentioned_stocks:
                                     # Fetch stock data in parallel
                                     stock_futures = {
                                         executor.submit(self.get_stock_data, symbol): symbol 
                                         for symbol in mentioned_stocks
                                     }
                                     
-                                    stock_data = {}
+                            stock_data = {}
                                     for stock_future in as_completed(stock_futures):
                                         try:
                                             symbol = stock_futures[stock_future]
                                             data = stock_future.result(timeout=3)
-                                            if data:
-                                                stock_data[symbol] = data
+                                if data:
+                                    stock_data[symbol] = data
                                         except Exception as e:
                                             self.logger.error(f"Error fetching stock data for news: {str(e)}")
-                                    
+                            
                                     # Calculate sentiment and impact score
-                                    sentiment = self.analyze_sentiment(
-                                        f"{article['title']} {article.get('summary', '')}"
-                                    )
-                                    
-                                    max_stock_move = max(
-                                        [abs(data['change_percent']) for data in stock_data.values()],
-                                        default=0
-                                    )
-                                    
-                                    impact_score = max_stock_move * 0.7 + abs(sentiment['polarity']) * 0.3
-                                    
-                                    results.append({
-                                        'article': article,
-                                        'mentioned_stocks': mentioned_stocks,
-                                        'stock_data': stock_data,
-                                        'sentiment': sentiment,
-                                        'impact_score': impact_score
-                                    })
+                            sentiment = self.analyze_sentiment(
+                                f"{article['title']} {article.get('summary', '')}"
+                            )
+                            
+                            max_stock_move = max(
+                                [abs(data['change_percent']) for data in stock_data.values()],
+                                default=0
+                            )
+                            
+                            impact_score = max_stock_move * 0.7 + abs(sentiment['polarity']) * 0.3
+                            
+                            results.append({
+                                'article': article,
+                                'mentioned_stocks': mentioned_stocks,
+                                'stock_data': stock_data,
+                                'sentiment': sentiment,
+                                'impact_score': impact_score
+                            })
                 except Exception as e:
                     self.logger.error(f"Error processing news from {source}: {str(e)}")
         
@@ -576,9 +576,9 @@ class MarketNewsAnalyzer:
         # Initialize sector data structure
         for stock_info in self.tracked_stocks.values():
             sector = stock_info['sector']
-            if sector not in sector_performance:
-                sector_performance[sector] = {
-                    'change_total': 0,
+                if sector not in sector_performance:
+                    sector_performance[sector] = {
+                        'change_total': 0,
                     'count': 0,
                     'stocks': []
                 }
@@ -596,8 +596,8 @@ class MarketNewsAnalyzer:
                     stock_data = future.result(timeout=5)  # 5 second timeout
                     if stock_data:
                         sector = self.tracked_stocks[symbol]['sector']
-                        sector_performance[sector]['change_total'] += stock_data['change_percent']
-                        sector_performance[sector]['count'] += 1
+                sector_performance[sector]['change_total'] += stock_data['change_percent']
+                sector_performance[sector]['count'] += 1
                         sector_performance[sector]['stocks'].append(stock_data)
                 except Exception as e:
                     self.logger.error(f"Error fetching data for {symbol}: {str(e)}")
@@ -843,7 +843,7 @@ class MarketNewsAnalyzer:
             volume_ratio = current_volume / avg_volume
             
             return {
-                'average_volume': int(avg_volume),
+                    'average_volume': int(avg_volume),
                 'current_volume': int(current_volume),
                 'volume_ratio': round(volume_ratio, 2)
             }
@@ -1023,23 +1023,23 @@ class MarketNewsAnalyzer:
             min_change = float('inf')
             
             # Collect data for each symbol
-            for symbol in symbols:
+                for symbol in symbols:
                 try:
                     stock = yf.Ticker(symbol)
                     data = stock.history(
-                        start=start_date,
-                        end=end_date,
-                        interval='1d'
+                                start=start_date,
+                                end=end_date,
+                                interval='1d'
                     )
                 
-                    if not data.empty:
-                        initial_price = data['Close'].iloc[0]
+                        if not data.empty:
+                            initial_price = data['Close'].iloc[0]
                         changes = ((data['Close'] - initial_price) / initial_price) * 100
                         symbol_data[symbol] = changes
-                        
+                            
                         max_change = max(max_change, changes.max())
                         min_change = min(min_change, changes.min())
-                except Exception as e:
+                    except Exception as e:
                     self.logger.error(f"Error getting data for {symbol}: {str(e)}")
                     continue
             

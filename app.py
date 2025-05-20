@@ -1,10 +1,24 @@
 from flask import Flask, render_template, jsonify, request, current_app
+from flask_cors import CORS
 from src.market_analyzer_fixed import MarketNewsAnalyzer
 from functools import wraps
 import json
 import time
+import os
 
 app = Flask(__name__)
+CORS(app)
+
+# Security headers
+@app.after_request
+def add_security_headers(response):
+    response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
+    response.headers['X-Content-Type-Options'] = 'nosniff'
+    response.headers['X-Frame-Options'] = 'SAMEORIGIN'
+    response.headers['X-XSS-Protection'] = '1; mode=block'
+    return response
+
+# Initialize the analyzer
 analyzer = MarketNewsAnalyzer()
 
 def cache_response(timeout=300):  # 5 minutes default timeout
@@ -17,7 +31,7 @@ def cache_response(timeout=300):  # 5 minutes default timeout
             if response:
                 timestamp, data = response
                 if time.time() - timestamp < timeout:
-                    return data
+                      return data
             
             response = f(*args, **kwargs)
             if not hasattr(current_app, 'response_cache'):
@@ -30,6 +44,10 @@ def cache_response(timeout=300):  # 5 minutes default timeout
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/health')
+def health_check():
+    return jsonify({'status': 'healthy'}), 200
 
 @app.route('/api/market_overview')
 @cache_response(timeout=300)  # Cache for 5 minutes
@@ -143,4 +161,5 @@ def check_alerts():
     return jsonify(alerts)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000) 
+    port = int(os.environ.get('PORT', 8000))
+    app.run(host='0.0.0.0', port=port) 
