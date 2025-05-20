@@ -1,0 +1,186 @@
+[
+  {
+    "article_title": "Barron's                    \n\n                            \n                            \n                            The AI Trade Is Back\u2014and That\u2019s Good Enough for the Stock Market",
+    "article_timestamp": "2025-05-18T22:56:14.689968",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.35,
+      "subjectivity": 0.55,
+      "assessment": "positive"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.39999389648438,
+        "price_change": 0.05999755859375,
+        "price_change_pct": 0.044330988781734366,
+        "volume": 222651500,
+        "avg_volume": 243488300.0
+      }
+    }
+  },
+  {
+    "article_title": "Elevance Health Inc. stock underperforms Friday when compared to competitors despite daily gains",
+    "article_timestamp": "2025-05-18T22:56:14.690648",
+    "affected_stocks": [
+      "NVDA",
+      "TSLA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.0,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0
+      },
+      "TSLA": {
+        "current_price": 349.9800109863281,
+        "price_change": 2.300018310546875,
+        "price_change_pct": 0.6615331221235067,
+        "volume": 93811800,
+        "avg_volume": 109563900.0
+      }
+    }
+  },
+  {
+    "article_title": "Stocks to Watch: Movano Health, Titan Machinery",
+    "article_timestamp": "2025-05-18T22:56:14.691179",
+    "affected_stocks": [
+      "AAPL"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.0,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "AAPL": {
+        "current_price": 211.25999450683594,
+        "price_change": -1.07000732421875,
+        "price_change_pct": -0.5039360029159357,
+        "volume": 53659100,
+        "avg_volume": 49338133.333333336
+      }
+    }
+  },
+  {
+    "article_title": "My accountant said I\u2019ll have to pay back Social Security I already received if I retire mid-year. Is that true?",
+    "article_timestamp": "2025-05-18T22:56:14.692125",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.12777777777777777,
+      "subjectivity": 0.2388888888888889,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0
+      }
+    }
+  },
+  {
+    "article_title": "These 19 stocks at the intersection of AI and robotics could see big sales boosts",
+    "article_timestamp": "2025-05-18T22:56:14.692296",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.1,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0
+      }
+    }
+  },
+  {
+    "article_title": "My second wife says her 2 kids should inherit our estate, but I also have 2 kids. Is that fair?",
+    "article_timestamp": "2025-05-18T22:56:14.692702",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.35,
+      "subjectivity": 0.45,
+      "assessment": "positive"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0
+      }
+    }
+  },
+  {
+    "article_title": "Michael Burry\u2019s Scion bets against Nvidia, turns bearish on Chinese stocks",
+    "article_timestamp": "2025-05-18T22:56:14.692917",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.0,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0
+      }
+    }
+  },
+  {
+    "article_title": "Stanley Druckenmiller\u2019s Duquesne dumps Alphabet, buys more Taiwan Semi and Coupang",
+    "article_timestamp": "2025-05-18T22:56:14.693203",
+    "affected_stocks": [
+      "GOOGL",
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.5,
+      "subjectivity": 0.5,
+      "assessment": "positive"
+    },
+    "stock_data": {
+      "GOOGL": {
+        "current_price": 166.19000244140625,
+        "price_change": 0.82000732421875,
+        "price_change_pct": 0.4958622171075602,
+        "volume": 42650100,
+        "avg_volume": 41517566.666666664
+      },
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0
+      }
+    }
+  }
+]

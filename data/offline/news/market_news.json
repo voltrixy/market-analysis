@@ -1,0 +1,754 @@
+{
+  "feed": [
+    {
+      "title": "Walmart Inc. Expands Operations in Europe",
+      "summary": "Sample news summary for Walmart Inc. Expands Operations in Europe",
+      "source": "CNBC",
+      "url": "https://example.com/news",
+      "time_published": "20250519T182609",
+      "overall_sentiment_score": 0.7456292835591316,
+      "ticker_sentiment": [
+        {
+          "ticker": "WMT",
+          "relevance_score": 0.5684132523799987,
+          "ticker_sentiment_score": 0.7456292835591316
+        }
+      ]
+    },
+    {
+      "title": "Market Watch: Technology Stocks in Focus",
+      "summary": "Sample news summary for Market Watch: Technology Stocks in Focus",
+      "source": "MarketWatch",
+      "url": "https://example.com/news",
+      "time_published": "20250519T173947",
+      "overall_sentiment_score": 0.16207996168786365,
+      "ticker_sentiment": [
+        {
+          "ticker": "META",
+          "relevance_score": 0.5423905043649535,
+          "ticker_sentiment_score": 0.16207996168786365
+        }
+      ]
+    },
+    {
+      "title": "Tesla Inc. Reports Strong Q2 Earnings, Beats Estimates",
+      "summary": "Sample news summary for Tesla Inc. Reports Strong Q2 Earnings, Beats Estimates",
+      "source": "CNBC",
+      "url": "https://example.com/news",
+      "time_published": "20250519T173205",
+      "overall_sentiment_score": 0.8479156092041655,
+      "ticker_sentiment": [
+        {
+          "ticker": "TSLA",
+          "relevance_score": 0.9031615006496109,
+          "ticker_sentiment_score": 0.8479156092041655
+        }
+      ]
+    },
+    {
+      "title": "Alphabet Inc. Stock Rallies After Product Launch",
+      "summary": "Sample news summary for Alphabet Inc. Stock Rallies After Product Launch",
+      "source": "Bloomberg",
+      "url": "https://example.com/news",
+      "time_published": "20250519T171608",
+      "overall_sentiment_score": 0.6712174274164606,
+      "ticker_sentiment": [
+        {
+          "ticker": "GOOGL",
+          "relevance_score": 0.7641903493159504,
+          "ticker_sentiment_score": 0.6712174274164606
+        }
+      ]
+    },
+    {
+      "title": "Tesla Inc. Announces New Product Launch",
+      "summary": "Sample news summary for Tesla Inc. Announces New Product Launch",
+      "source": "Reuters",
+      "url": "https://example.com/news",
+      "time_published": "20250519T160048",
+      "overall_sentiment_score": -0.7082406593303965,
+      "ticker_sentiment": [
+        {
+          "ticker": "TSLA",
+          "relevance_score": 0.8751170311072715,
+          "ticker_sentiment_score": -0.7082406593303965
+        }
+      ]
+    },
+    {
+      "title": "Tesla Inc. Announces New Product Launch",
+      "summary": "Sample news summary for Tesla Inc. Announces New Product Launch",
+      "source": "MarketWatch",
+      "url": "https://example.com/news",
+      "time_published": "20250519T152029",
+      "overall_sentiment_score": 0.6043967618036756,
+      "ticker_sentiment": [
+        {
+          "ticker": "TSLA",
+          "relevance_score": 0.7388096512443993,
+          "ticker_sentiment_score": 0.6043967618036756
+        }
+      ]
+    },
+    {
+      "title": "Tesla Inc. Expands Operations in North America",
+      "summary": "Sample news summary for Tesla Inc. Expands Operations in North America",
+      "source": "Reuters",
+      "url": "https://example.com/news",
+      "time_published": "20250519T145426",
+      "overall_sentiment_score": 0.34826302106862217,
+      "ticker_sentiment": [
+        {
+          "ticker": "TSLA",
+          "relevance_score": 0.6107677001283865,
+          "ticker_sentiment_score": 0.34826302106862217
+        }
+      ]
+    },
+    {
+      "title": "Microsoft Corp. Expands Operations in Middle East",
+      "summary": "Sample news summary for Microsoft Corp. Expands Operations in Middle East",
+      "source": "MarketWatch",
+      "url": "https://example.com/news",
+      "time_published": "20250519T133056",
+      "overall_sentiment_score": 0.049807189256035445,
+      "ticker_sentiment": [
+        {
+          "ticker": "MSFT",
+          "relevance_score": 0.5113374102763955,
+          "ticker_sentiment_score": 0.049807189256035445
+        }
+      ]
+    },
+    {
+      "title": "Amazon.com Inc. CEO Discusses Future Growth Plans",
+      "summary": "Sample news summary for Amazon.com Inc. CEO Discusses Future Growth Plans",
+      "source": "Bloomberg",
+      "url": "https://example.com/news",
+      "time_published": "20250519T131858",
+      "overall_sentiment_score": 0.49359864743751714,
+      "ticker_sentiment": [
+        {
+          "ticker": "AMZN",
+          "relevance_score": 0.877067461998671,
+          "ticker_sentiment_score": 0.49359864743751714
+        }
+      ]
+    },
+    {
+      "title": "Analysts Review Alphabet Inc. Stock",
+      "summary": "Sample news summary for Analysts Review Alphabet Inc. Stock",
+      "source": "MarketWatch",
+      "url": "https://example.com/news",
+      "time_published": "20250519T113718",
+      "overall_sentiment_score": -0.8105835738989089,
+      "ticker_sentiment": [
+        {
+          "ticker": "GOOGL",
+          "relevance_score": 0.7391919329596872,
+          "ticker_sentiment_score": -0.8105835738989089
+        }
+      ]
+    },
+    {
+      "title": "Tesla Inc. Partners with Johnson & Johnson for Innovation",
+      "summary": "Sample news summary for Tesla Inc. Partners with Johnson & Johnson for Innovation",
+      "source": "Reuters",
+      "url": "https://example.com/news",
+      "time_published": "20250519T110048",
+      "overall_sentiment_score": 0.4066827407346063,
+      "ticker_sentiment": [
+        {
+          "ticker": "TSLA",
+          "relevance_score": 0.5435479854068519,
+          "ticker_sentiment_score": 0.4066827407346063
+        }
+      ]
+    },
+    {
+      "title": "Visa Inc. Reports Strong Q2 Earnings, Beats Estimates",
+      "summary": "Sample news summary for Visa Inc. Reports Strong Q2 Earnings, Beats Estimates",
+      "source": "CNBC",
+      "url": "https://example.com/news",
+      "time_published": "20250519T100831",
+      "overall_sentiment_score": 0.3698786027904257,
+      "ticker_sentiment": [
+        {
+          "ticker": "V",
+          "relevance_score": 0.5524262236290625,
+          "ticker_sentiment_score": 0.3698786027904257
+        }
+      ]
+    },
+    {
+      "title": "Amazon.com Inc. Announces New Product Launch",
+      "summary": "Sample news summary for Amazon.com Inc. Announces New Product Launch",
+      "source": "MarketWatch",
+      "url": "https://example.com/news",
+      "time_published": "20250519T094956",
+      "overall_sentiment_score": -0.7245770568609902,
+      "ticker_sentiment": [
+        {
+          "ticker": "AMZN",
+          "relevance_score": 0.9868498622002366,
+          "ticker_sentiment_score": -0.7245770568609902
+        }
+      ]
+    },
+    {
+      "title": "Amazon.com Inc. Announces New Product Launch",
+      "summary": "Sample news summary for Amazon.com Inc. Announces New Product Launch",
+      "source": "Bloomberg",
+      "url": "https://example.com/news",
+      "time_published": "20250519T085946",
+      "overall_sentiment_score": -0.9658659413079334,
+      "ticker_sentiment": [
+        {
+          "ticker": "AMZN",
+          "relevance_score": 0.8224148005862519,
+          "ticker_sentiment_score": -0.9658659413079334
+        }
+      ]
+    },
+    {
+      "title": "Apple Inc. CEO Discusses Future Growth Plans",
+      "summary": "Sample news summary for Apple Inc. CEO Discusses Future Growth Plans",
+      "source": "MarketWatch",
+      "url": "https://example.com/news",
+      "time_published": "20250519T082816",
+      "overall_sentiment_score": -0.0889139712088236,
+      "ticker_sentiment": [
+        {
+          "ticker": "AAPL",
+          "relevance_score": 0.7621521453952025,
+          "ticker_sentiment_score": -0.0889139712088236
+        }
+      ]
+    },
+    {
+      "title": "Market Watch: Technology Stocks in Focus",
+      "summary": "Sample news summary for Market Watch: Technology Stocks in Focus",
+      "source": "MarketWatch",
+      "url": "https://example.com/news",
+      "time_published": "20250519T082102",
+      "overall_sentiment_score": 0.42630878374988024,
+      "ticker_sentiment": [
+        {
+          "ticker": "AAPL",
+          "relevance_score": 0.9572845620537762,
+          "ticker_sentiment_score": 0.42630878374988024
+        }
+      ]
+    },
+    {
+      "title": "Walmart Inc. Partners with JPMorgan Chase & Co. for Innovation",
+      "summary": "Sample news summary for Walmart Inc. Partners with JPMorgan Chase & Co. for Innovation",
+      "source": "CNBC",
+      "url": "https://example.com/news",
+      "time_published": "20250519T081738",
+      "overall_sentiment_score": 0.9744725127562797,
+      "ticker_sentiment": [
+        {
+          "ticker": "WMT",
+          "relevance_score": 0.8323259058508236,
+          "ticker_sentiment_score": 0.9744725127562797
+        }
+      ]
+    },
+    {
+      "title": "Market Watch: Automotive Stocks in Focus",
+      "summary": "Sample news summary for Market Watch: Automotive Stocks in Focus",
+      "source": "MarketWatch",
+      "url": "https://example.com/news",
+      "time_published": "20250519T064134",
+      "overall_sentiment_score": -0.0037649514519282334,
+      "ticker_sentiment": [
+        {
+          "ticker": "TSLA",
+          "relevance_score": 0.5399095429656461,
+          "ticker_sentiment_score": -0.0037649514519282334
+        }
+      ]
+    },
+    {
+      "title": "Market Watch: Technology Stocks in Focus",
+      "summary": "Sample news summary for Market Watch: Technology Stocks in Focus",
+      "source": "MarketWatch",
+      "url": "https://example.com/news",
+      "time_published": "20250519T045409",
+      "overall_sentiment_score": -0.44500819325757,
+      "ticker_sentiment": [
+        {
+          "ticker": "AAPL",
+          "relevance_score": 0.6517844461572802,
+          "ticker_sentiment_score": -0.44500819325757
+        }
+      ]
+    },
+    {
+      "title": "Johnson & Johnson Expands Operations in Asia",
+      "summary": "Sample news summary for Johnson & Johnson Expands Operations in Asia",
+      "source": "Bloomberg",
+      "url": "https://example.com/news",
+      "time_published": "20250519T032407",
+      "overall_sentiment_score": -0.4258802337426948,
+      "ticker_sentiment": [
+        {
+          "ticker": "JNJ",
+          "relevance_score": 0.8308299102789092,
+          "ticker_sentiment_score": -0.4258802337426948
+        }
+      ]
+    },
+    {
+      "title": "JPMorgan Chase & Co. Expands Operations in Asia",
+      "summary": "Sample news summary for JPMorgan Chase & Co. Expands Operations in Asia",
+      "source": "Reuters",
+      "url": "https://example.com/news",
+      "time_published": "20250519T025311",
+      "overall_sentiment_score": -0.8788377456150203,
+      "ticker_sentiment": [
+        {
+          "ticker": "JPM",
+          "relevance_score": 0.9380873621098317,
+          "ticker_sentiment_score": -0.8788377456150203
+        }
+      ]
+    },
+    {
+      "title": "JPMorgan Chase & Co. Stock Surges After Strategic Announcement",
+      "summary": "Sample news summary for JPMorgan Chase & Co. Stock Surges After Strategic Announcement",
+      "source": "MarketWatch",
+      "url": "https://example.com/news",
+      "time_published": "20250519T001021",
+      "overall_sentiment_score": -0.1254242756652042,
+      "ticker_sentiment": [
+        {
+          "ticker": "JPM",
+          "relevance_score": 0.7263340945149577,
+          "ticker_sentiment_score": -0.1254242756652042
+        }
+      ]
+    },
+    {
+      "title": "Analysts Set New Target for Microsoft Corp. Stock",
+      "summary": "Sample news summary for Analysts Set New Target for Microsoft Corp. Stock",
+      "source": "Reuters",
+      "url": "https://example.com/news",
+      "time_published": "20250518T221827",
+      "overall_sentiment_score": 0.03714824060835076,
+      "ticker_sentiment": [
+        {
+          "ticker": "MSFT",
+          "relevance_score": 0.9620684237701402,
+          "ticker_sentiment_score": 0.03714824060835076
+        }
+      ]
+    },
+    {
+      "title": "Walmart Inc. CEO Discusses Future Growth Plans",
+      "summary": "Sample news summary for Walmart Inc. CEO Discusses Future Growth Plans",
+      "source": "Bloomberg",
+      "url": "https://example.com/news",
+      "time_published": "20250518T211829",
+      "overall_sentiment_score": 0.3800731429882034,
+      "ticker_sentiment": [
+        {
+          "ticker": "WMT",
+          "relevance_score": 0.8758949051730445,
+          "ticker_sentiment_score": 0.3800731429882034
+        }
+      ]
+    },
+    {
+      "title": "Analysts Upgrade Walmart Inc. Stock",
+      "summary": "Sample news summary for Analysts Upgrade Walmart Inc. Stock",
+      "source": "Reuters",
+      "url": "https://example.com/news",
+      "time_published": "20250518T202745",
+      "overall_sentiment_score": -0.8076627058070625,
+      "ticker_sentiment": [
+        {
+          "ticker": "WMT",
+          "relevance_score": 0.5904558947343623,
+          "ticker_sentiment_score": -0.8076627058070625
+        }
+      ]
+    },
+    {
+      "title": "Market Watch: Consumer Cyclical Stocks in Focus",
+      "summary": "Sample news summary for Market Watch: Consumer Cyclical Stocks in Focus",
+      "source": "CNBC",
+      "url": "https://example.com/news",
+      "time_published": "20250518T192753",
+      "overall_sentiment_score": -0.750527518277007,
+      "ticker_sentiment": [
+        {
+          "ticker": "AMZN",
+          "relevance_score": 0.9305009055369037,
+          "ticker_sentiment_score": -0.750527518277007
+        }
+      ]
+    },
+    {
+      "title": "Market Watch: Consumer Cyclical Stocks in Focus",
+      "summary": "Sample news summary for Market Watch: Consumer Cyclical Stocks in Focus",
+      "source": "Bloomberg",
+      "url": "https://example.com/news",
+      "time_published": "20250518T192437",
+      "overall_sentiment_score": -0.03943799234034828,
+      "ticker_sentiment": [
+        {
+          "ticker": "AMZN",
+          "relevance_score": 0.967032062062724,
+          "ticker_sentiment_score": -0.03943799234034828
+        }
+      ]
+    },
+    {
+      "title": "Meta Platforms Inc. Stock Surges After Product Launch",
+      "summary": "Sample news summary for Meta Platforms Inc. Stock Surges After Product Launch",
+      "source": "Bloomberg",
+      "url": "https://example.com/news",
+      "time_published": "20250518T175615",
+      "overall_sentiment_score": -0.9642286792193895,
+      "ticker_sentiment": [
+        {
+          "ticker": "META",
+          "relevance_score": 0.5605689441754016,
+          "ticker_sentiment_score": -0.9642286792193895
+        }
+      ]
+    },
+    {
+      "title": "Analysts Upgrade Walmart Inc. Stock",
+      "summary": "Sample news summary for Analysts Upgrade Walmart Inc. Stock",
+      "source": "Bloomberg",
+      "url": "https://example.com/news",
+      "time_published": "20250518T145713",
+      "overall_sentiment_score": 0.5472271964722586,
+      "ticker_sentiment": [
+        {
+          "ticker": "WMT",
+          "relevance_score": 0.8436973355170391,
+          "ticker_sentiment_score": 0.5472271964722586
+        }
+      ]
+    },
+    {
+      "title": "JPMorgan Chase & Co. Partners with JPMorgan Chase & Co. for Innovation",
+      "summary": "Sample news summary for JPMorgan Chase & Co. Partners with JPMorgan Chase & Co. for Innovation",
+      "source": "Reuters",
+      "url": "https://example.com/news",
+      "time_published": "20250518T141338",
+      "overall_sentiment_score": 0.19207439283637373,
+      "ticker_sentiment": [
+        {
+          "ticker": "JPM",
+          "relevance_score": 0.7938941749819663,
+          "ticker_sentiment_score": 0.19207439283637373
+        }
+      ]
+    },
+    {
+      "title": "JPMorgan Chase & Co. CEO Discusses Future Growth Plans",
+      "summary": "Sample news summary for JPMorgan Chase & Co. CEO Discusses Future Growth Plans",
+      "source": "CNBC",
+      "url": "https://example.com/news",
+      "time_published": "20250518T124015",
+      "overall_sentiment_score": 0.4959057691243367,
+      "ticker_sentiment": [
+        {
+          "ticker": "JPM",
+          "relevance_score": 0.5978713886917721,
+          "ticker_sentiment_score": 0.4959057691243367
+        }
+      ]
+    },
+    {
+      "title": "Johnson & Johnson Reports Strong Q3 Earnings, Beats Estimates",
+      "summary": "Sample news summary for Johnson & Johnson Reports Strong Q3 Earnings, Beats Estimates",
+      "source": "CNBC",
+      "url": "https://example.com/news",
+      "time_published": "20250518T121845",
+      "overall_sentiment_score": -0.5406752984066887,
+      "ticker_sentiment": [
+        {
+          "ticker": "JNJ",
+          "relevance_score": 0.8246879091194701,
+          "ticker_sentiment_score": -0.5406752984066887
+        }
+      ]
+    },
+    {
+      "title": "Microsoft Corp. Expands Operations in North America",
+      "summary": "Sample news summary for Microsoft Corp. Expands Operations in North America",
+      "source": "Reuters",
+      "url": "https://example.com/news",
+      "time_published": "20250518T121439",
+      "overall_sentiment_score": 0.5575998568535652,
+      "ticker_sentiment": [
+        {
+          "ticker": "MSFT",
+          "relevance_score": 0.7571827756125553,
+          "ticker_sentiment_score": 0.5575998568535652
+        }
+      ]
+    },
+    {
+      "title": "Johnson & Johnson CEO Discusses Future Growth Plans",
+      "summary": "Sample news summary for Johnson & Johnson CEO Discusses Future Growth Plans",
+      "source": "MarketWatch",
+      "url": "https://example.com/news",
+      "time_published": "20250518T114934",
+      "overall_sentiment_score": 0.7572443330337946,
+      "ticker_sentiment": [
+        {
+          "ticker": "JNJ",
+          "relevance_score": 0.6097599110032297,
+          "ticker_sentiment_score": 0.7572443330337946
+        }
+      ]
+    },
+    {
+      "title": "Meta Platforms Inc. Announces New Product Launch",
+      "summary": "Sample news summary for Meta Platforms Inc. Announces New Product Launch",
+      "source": "MarketWatch",
+      "url": "https://example.com/news",
+      "time_published": "20250518T113914",
+      "overall_sentiment_score": 0.9112600961802289,
+      "ticker_sentiment": [
+        {
+          "ticker": "META",
+          "relevance_score": 0.6682298014448531,
+          "ticker_sentiment_score": 0.9112600961802289
+        }
+      ]
+    },
+    {
+      "title": "Walmart Inc. Expands Operations in Middle East",
+      "summary": "Sample news summary for Walmart Inc. Expands Operations in Middle East",
+      "source": "MarketWatch",
+      "url": "https://example.com/news",
+      "time_published": "20250518T083534",
+      "overall_sentiment_score": -0.7469308584116401,
+      "ticker_sentiment": [
+        {
+          "ticker": "WMT",
+          "relevance_score": 0.8384125851516628,
+          "ticker_sentiment_score": -0.7469308584116401
+        }
+      ]
+    },
+    {
+      "title": "Alphabet Inc. Stock Stabilizes After Earnings Report",
+      "summary": "Sample news summary for Alphabet Inc. Stock Stabilizes After Earnings Report",
+      "source": "Reuters",
+      "url": "https://example.com/news",
+      "time_published": "20250518T072451",
+      "overall_sentiment_score": -0.5360174590879991,
+      "ticker_sentiment": [
+        {
+          "ticker": "GOOGL",
+          "relevance_score": 0.5567368155017115,
+          "ticker_sentiment_score": -0.5360174590879991
+        }
+      ]
+    },
+    {
+      "title": "Visa Inc. Partners with Visa Inc. for Innovation",
+      "summary": "Sample news summary for Visa Inc. Partners with Visa Inc. for Innovation",
+      "source": "Reuters",
+      "url": "https://example.com/news",
+      "time_published": "20250518T071914",
+      "overall_sentiment_score": -0.41764873751938136,
+      "ticker_sentiment": [
+        {
+          "ticker": "V",
+          "relevance_score": 0.9953007899602708,
+          "ticker_sentiment_score": -0.41764873751938136
+        }
+      ]
+    },
+    {
+      "title": "Analysts Set New Target for Johnson & Johnson Stock",
+      "summary": "Sample news summary for Analysts Set New Target for Johnson & Johnson Stock",
+      "source": "Bloomberg",
+      "url": "https://example.com/news",
+      "time_published": "20250518T065213",
+      "overall_sentiment_score": -0.29752762321171256,
+      "ticker_sentiment": [
+        {
+          "ticker": "JNJ",
+          "relevance_score": 0.688066230933422,
+          "ticker_sentiment_score": -0.29752762321171256
+        }
+      ]
+    },
+    {
+      "title": "Industry Update: Automotive Trends and Forecasts",
+      "summary": "Sample news summary for Industry Update: Automotive Trends and Forecasts",
+      "source": "Bloomberg",
+      "url": "https://example.com/news",
+      "time_published": "20250518T053440",
+      "overall_sentiment_score": 0.5418507239503987,
+      "ticker_sentiment": [
+        {
+          "ticker": "TSLA",
+          "relevance_score": 0.6765634518663006,
+          "ticker_sentiment_score": 0.5418507239503987
+        }
+      ]
+    },
+    {
+      "title": "Industry Update: Consumer Cyclical Trends and Forecasts",
+      "summary": "Sample news summary for Industry Update: Consumer Cyclical Trends and Forecasts",
+      "source": "CNBC",
+      "url": "https://example.com/news",
+      "time_published": "20250518T051854",
+      "overall_sentiment_score": 0.6370210258724642,
+      "ticker_sentiment": [
+        {
+          "ticker": "AMZN",
+          "relevance_score": 0.8815527817077979,
+          "ticker_sentiment_score": 0.6370210258724642
+        }
+      ]
+    },
+    {
+      "title": "Amazon.com Inc. Reports Strong Q4 Earnings, Beats Estimates",
+      "summary": "Sample news summary for Amazon.com Inc. Reports Strong Q4 Earnings, Beats Estimates",
+      "source": "Bloomberg",
+      "url": "https://example.com/news",
+      "time_published": "20250518T014004",
+      "overall_sentiment_score": -0.9983473748576888,
+      "ticker_sentiment": [
+        {
+          "ticker": "AMZN",
+          "relevance_score": 0.6019325156236299,
+          "ticker_sentiment_score": -0.9983473748576888
+        }
+      ]
+    },
+    {
+      "title": "Johnson & Johnson Partners with Johnson & Johnson for Innovation",
+      "summary": "Sample news summary for Johnson & Johnson Partners with Johnson & Johnson for Innovation",
+      "source": "Bloomberg",
+      "url": "https://example.com/news",
+      "time_published": "20250518T013811",
+      "overall_sentiment_score": -0.42257923182536405,
+      "ticker_sentiment": [
+        {
+          "ticker": "JNJ",
+          "relevance_score": 0.8158879028660341,
+          "ticker_sentiment_score": -0.42257923182536405
+        }
+      ]
+    },
+    {
+      "title": "Market Watch: Technology Stocks in Focus",
+      "summary": "Sample news summary for Market Watch: Technology Stocks in Focus",
+      "source": "Bloomberg",
+      "url": "https://example.com/news",
+      "time_published": "20250518T012503",
+      "overall_sentiment_score": 0.5561112407312605,
+      "ticker_sentiment": [
+        {
+          "ticker": "AAPL",
+          "relevance_score": 0.6369387438967835,
+          "ticker_sentiment_score": 0.5561112407312605
+        }
+      ]
+    },
+    {
+      "title": "Visa Inc. Expands Operations in Latin America",
+      "summary": "Sample news summary for Visa Inc. Expands Operations in Latin America",
+      "source": "MarketWatch",
+      "url": "https://example.com/news",
+      "time_published": "20250518T005037",
+      "overall_sentiment_score": -0.8189028470218165,
+      "ticker_sentiment": [
+        {
+          "ticker": "V",
+          "relevance_score": 0.8371261571583812,
+          "ticker_sentiment_score": -0.8189028470218165
+        }
+      ]
+    },
+    {
+      "title": "Alphabet Inc. Announces New Product Launch",
+      "summary": "Sample news summary for Alphabet Inc. Announces New Product Launch",
+      "source": "CNBC",
+      "url": "https://example.com/news",
+      "time_published": "20250518T004040",
+      "overall_sentiment_score": 0.7910234488169732,
+      "ticker_sentiment": [
+        {
+          "ticker": "GOOGL",
+          "relevance_score": 0.8870436541104418,
+          "ticker_sentiment_score": 0.7910234488169732
+        }
+      ]
+    },
+    {
+      "title": "Walmart Inc. Expands Operations in North America",
+      "summary": "Sample news summary for Walmart Inc. Expands Operations in North America",
+      "source": "CNBC",
+      "url": "https://example.com/news",
+      "time_published": "20250518T002541",
+      "overall_sentiment_score": 0.8721451533731428,
+      "ticker_sentiment": [
+        {
+          "ticker": "WMT",
+          "relevance_score": 0.8948602454204317,
+          "ticker_sentiment_score": 0.8721451533731428
+        }
+      ]
+    },
+    {
+      "title": "Amazon.com Inc. Announces New Product Launch",
+      "summary": "Sample news summary for Amazon.com Inc. Announces New Product Launch",
+      "source": "MarketWatch",
+      "url": "https://example.com/news",
+      "time_published": "20250518T001216",
+      "overall_sentiment_score": -0.9956527796750383,
+      "ticker_sentiment": [
+        {
+          "ticker": "AMZN",
+          "relevance_score": 0.8507894078597019,
+          "ticker_sentiment_score": -0.9956527796750383
+        }
+      ]
+    },
+    {
+      "title": "Analysts Set New Target for JPMorgan Chase & Co. Stock",
+      "summary": "Sample news summary for Analysts Set New Target for JPMorgan Chase & Co. Stock",
+      "source": "CNBC",
+      "url": "https://example.com/news",
+      "time_published": "20250517T232151",
+      "overall_sentiment_score": -0.6778727998362877,
+      "ticker_sentiment": [
+        {
+          "ticker": "JPM",
+          "relevance_score": 0.5476399459683751,
+          "ticker_sentiment_score": -0.6778727998362877
+        }
+      ]
+    },
+    {
+      "title": "Alphabet Inc. CEO Discusses Future Growth Plans",
+      "summary": "Sample news summary for Alphabet Inc. CEO Discusses Future Growth Plans",
+      "source": "CNBC",
+      "url": "https://example.com/news",
+      "time_published": "20250517T212154",
+      "overall_sentiment_score": 0.2800233588341936,
+      "ticker_sentiment": [
+        {
+          "ticker": "GOOGL",
+          "relevance_score": 0.5856491710300228,
+          "ticker_sentiment_score": 0.2800233588341936
+        }
+      ]
+    }
+  ]
+}

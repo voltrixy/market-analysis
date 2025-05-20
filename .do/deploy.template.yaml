@@ -1,0 +1,22 @@
+spec:
+  name: market-analysis
+  services:
+  - name: web
+    git:
+      branch: main
+      repo_clone_url: ${_self.repository}
+    build_command: pip install -r requirements.txt
+    run_command: gunicorn --config gunicorn_config.py wsgi:app
+    envs:
+    - key: FLASK_ENV
+      value: production
+    - key: FLASK_APP
+      value: app.py
+    instance_count: 1
+    instance_size_slug: basic-xs
+    http_port: 8000
+    routes:
+    - path: /
+    health_check:
+      http_path: /
+      port: 8000 

@@ -1,0 +1,26 @@
+[
+  {
+    "article_title": "Michael Burry\u2019s Scion bets against Nvidia, turns bearish on Chinese stocks",
+    "article_timestamp": "2025-05-19T11:53:37.832243",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.0,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758,
+        "logo": "https://logo.clearbit.com/nvidia.com"
+      }
+    }
+  }
+]

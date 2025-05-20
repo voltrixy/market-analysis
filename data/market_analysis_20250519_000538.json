@@ -1,0 +1,541 @@
+[
+  {
+    "article_title": "Welcome to the real world, Class of 2025. Here are 5 money tips you haven\u2019t heard a million times.",
+    "article_timestamp": "2025-05-19T00:05:37.321100",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.33409090909090905,
+      "subjectivity": 0.5511363636363638,
+      "assessment": "positive"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "Prices are probably going up at Walmart. Target and other retailers will detail the tariff impact this week",
+    "article_timestamp": "2025-05-19T00:05:37.321866",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": -0.125,
+      "subjectivity": 0.375,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "My father\u2019s widow keeps sending me $200 checks in the mail. Why would she do this?",
+    "article_timestamp": "2025-05-19T00:05:37.322547",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.0,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "Barron's                    \nTrump Attacks Walmart, Tells Retailer to \u2018Eat the Tariffs\u2019 Instead of Raising Prices",
+    "article_timestamp": "2025-05-19T00:05:37.322644",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.0,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "Opinion                    \nWhat is AI really giving back to tech investors? Here\u2019s the hard truth.",
+    "article_timestamp": "2025-05-19T00:05:37.322839",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": -0.030555555555555558,
+      "subjectivity": 0.24722222222222223,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "My accountant said I\u2019ll have to pay back Social Security I already received if I retire mid-year. Is that true?",
+    "article_timestamp": "2025-05-19T00:05:37.323594",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.12777777777777777,
+      "subjectivity": 0.2388888888888889,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "These 19 stocks at the intersection of AI and robotics could see big sales boosts",
+    "article_timestamp": "2025-05-19T00:05:37.323966",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.1,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "My second wife says her 2 kids should inherit our estate, but I also have 2 kids. Is that fair?",
+    "article_timestamp": "2025-05-19T00:05:37.324887",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.35,
+      "subjectivity": 0.45,
+      "assessment": "positive"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "Mexican Navy Training Vessel Strikes Brooklyn Bridge, Killing Two",
+    "article_timestamp": "2025-05-19T00:05:37.325112",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.0,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "Trump Sounds Upbeat on Ukraine Cease-Fire as Russia Unleashes Drone Barrage",
+    "article_timestamp": "2025-05-19T00:05:37.325292",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.0,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "\u2018Second Front\u2019 Review: The Allies on the Mend",
+    "article_timestamp": "2025-05-19T00:05:37.326530",
+    "affected_stocks": [
+      "TSLA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.0,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "TSLA": {
+        "current_price": 349.9800109863,
+        "price_change": 2.300018310499979,
+        "price_change_pct": 0.6615331221099827,
+        "volume": 93811800,
+        "avg_volume": 109563900.0,
+        "high": 351.6199951172,
+        "low": 334.7200012207
+      }
+    }
+  },
+  {
+    "article_title": "Corrected                    \nHamas Wanted to Torpedo Israel-Saudi Deal With Oct. 7 Attacks, Documents Reveal",
+    "article_timestamp": "2025-05-19T00:05:37.328631",
+    "affected_stocks": [
+      "TSLA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.0,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "TSLA": {
+        "current_price": 349.9800109863,
+        "price_change": 2.300018310499979,
+        "price_change_pct": 0.6615331221099827,
+        "volume": 93811800,
+        "avg_volume": 109563900.0,
+        "high": 351.6199951172,
+        "low": 334.7200012207
+      }
+    }
+  },
+  {
+    "article_title": "This one stock kept the Dow from having an even better week",
+    "article_timestamp": "2025-05-19T00:05:38.592663",
+    "affected_stocks": [
+      "TSLA"
+    ],
+    "sentiment": {
+      "polarity": 0.5,
+      "subjectivity": 0.5,
+      "assessment": "positive"
+    },
+    "stock_data": {
+      "TSLA": {
+        "current_price": 349.9800109863,
+        "price_change": 2.300018310499979,
+        "price_change_pct": 0.6615331221099827,
+        "volume": 93811800,
+        "avg_volume": 109563900.0,
+        "high": 351.6199951172,
+        "low": 334.7200012207
+      }
+    }
+  },
+  {
+    "article_title": "Feeding the future: Experts on AI\u2019s role in agriculture and food systems",
+    "article_timestamp": "2025-05-19T00:05:38.593037",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.125,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "CRISPR-based gene editing revolutionized medicine\u2014what's next?",
+    "article_timestamp": "2025-05-19T00:05:38.593707",
+    "affected_stocks": [
+      "TSLA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.0,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "TSLA": {
+        "current_price": 349.9800109863,
+        "price_change": 2.300018310499979,
+        "price_change_pct": 0.6615331221099827,
+        "volume": 93811800,
+        "avg_volume": 109563900.0,
+        "high": 351.6199951172,
+        "low": 334.7200012207
+      }
+    }
+  },
+  {
+    "article_title": "Millennial entrepreneur raised $2 million for a money-saving app for immigrants",
+    "article_timestamp": "2025-05-19T00:05:38.595482",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.0,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "Business and tech leaders discuss the challenges and opportunities presented by AI's widespread adoption",
+    "article_timestamp": "2025-05-19T00:05:38.597177",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.0,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "Pony.ai CEO James Peng on rapidly developing autonomous driving space",
+    "article_timestamp": "2025-05-19T00:05:38.599377",
+    "affected_stocks": [
+      "TSLA",
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.4,
+      "subjectivity": 0.7,
+      "assessment": "positive"
+    },
+    "stock_data": {
+      "TSLA": {
+        "current_price": 349.9800109863,
+        "price_change": 2.300018310499979,
+        "price_change_pct": 0.6615331221099827,
+        "volume": 93811800,
+        "avg_volume": 109563900.0,
+        "high": 351.6199951172,
+        "low": 334.7200012207
+      },
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "Alibaba's Joe Tsai on sports investing, the future of AI and the Chinese economy",
+    "article_timestamp": "2025-05-19T00:05:38.600166",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.0625,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "Street heads into next week looking for trade details, clues on consumer spending",
+    "article_timestamp": "2025-05-19T00:05:38.602680",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.0,
+      "subjectivity": 0.0,
+      "assessment": "neutral"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "The\u00a0world's best airport is building a mega terminal to ride the travel boom in Asia",
+    "article_timestamp": "2025-05-19T00:05:38.603012",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 1.0,
+      "subjectivity": 0.3,
+      "assessment": "positive"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "Indian airlines can't fly over Pakistan. Here's how that is affecting flights",
+    "article_timestamp": "2025-05-19T00:05:38.604773",
+    "affected_stocks": [
+      "NVDA"
+    ],
+    "sentiment": {
+      "polarity": 0.8,
+      "subjectivity": 0.9,
+      "assessment": "positive"
+    },
+    "stock_data": {
+      "NVDA": {
+        "current_price": 135.3999938965,
+        "price_change": 0.059997558600002776,
+        "price_change_pct": 0.04433098878635135,
+        "volume": 222651500,
+        "avg_volume": 243488300.0,
+        "high": 136.3500061035,
+        "low": 131.6799926758
+      }
+    }
+  },
+  {
+    "article_title": "eVTOLS: Are flying cars finally becoming reality?",
+    "article_timestamp": "2025-05-19T00:05:38.608020",
+    "affected_stocks": [
+      "TSLA"
+    ],
+    "sentiment": {
+      "polarity": 0.45,
+      "subjectivity": 0.8500000000000001,
+      "assessment": "positive"
+    },
+    "stock_data": {
+      "TSLA": {
+        "current_price": 349.9800109863,
+        "price_change": 2.300018310499979,
+        "price_change_pct": 0.6615331221099827,
+        "volume": 93811800,
+        "avg_volume": 109563900.0,
+        "high": 351.6199951172,
+        "low": 334.7200012207
+      }
+    }
+  }
+]
