@@ -5,7 +5,7 @@ services:
   github:
     branch: main
     deploy_on_push: true
-    repo: owner/market-analysis
+    repo: voltrixy/market-analysis
   build_command: pip install -r requirements.txt
   run_command: gunicorn --workers 4 --timeout 120 wsgi:app
   envs:
